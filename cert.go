@@ -169,7 +169,7 @@ func (m *mkcert) generateKey(rootCA bool) (crypto.PrivateKey, error) {
 		return ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
 	}
 	if rootCA {
-		return rsa.GenerateKey(rand.Reader, 3072)
+		return rsa.GenerateKey(rand.Reader, 4096)
 	}
 	return rsa.GenerateKey(rand.Reader, 2048)
 }
